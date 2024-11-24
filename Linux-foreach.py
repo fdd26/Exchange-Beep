@@ -31,7 +31,7 @@
 #####################################################################
 
 import os
-#import pyautogui as pag
+
 import time
 from python_imagesearch.imagesearch import imagesearch
 
@@ -41,47 +41,20 @@ freqMerc = 500
 # Gold frequency is set to 800Hz
 freqGold = 800
 
-# duration is set to 100 milliseconds
+# duration is set to 500 milliseconds
 dur = 0.500
 
+# List of images
+images_to_search = ["exchange1.png", "exchange2.png", "exchange3.png", "exchange4.png", "gold-dm1.png", "gold-dm2.png"]
 
 # Forever loop...
 while True:
-    # 100% resolution square image search
-    pos = imagesearch("exchange1.png")
-    if pos[0] != -1:
-        winsound.Beep(freqMerc, dur)
-        del pos
-
-    # 25% resolution square image search with truncation
-    pos = imagesearch("exchange2.png")
-    if pos[0] != -1:
-        os.system('play -n synth {} sine {}'.format(dur, freqMerc))  # Play if find "exchange"
-        del pos
-
-    # Truncation search works with side arrows
-    pos = imagesearch("exchange3.png")
-    if pos[0] != -1:
-        os.system('play -n synth {} sine {}'.format(dur, freqMerc))  # Play if find "exchange"
-        del pos
-
-    # Truncation search works with bottom arrows
-    pos = imagesearch("exchange4.png")
-    if pos[0] != -1:
-        os.system('play -n synth {} sine {}'.format(dur, freqMerc))  # Play if find "exchange"
-        del pos
-
-    # Truncation search works with bottom arrows
-    pos = imagesearch("gold-dm1.png")
-    if pos[0] != -1:
-        os.system('play -n synth {} sine {}'.format(dur, freqGold))  # Play if find "gold-dm"
-        del pos
-
-    # Truncation search works with bottom arrows
-    pos = imagesearch("gold-dm2.png")
-    if pos[0] != -1:
-        os.system('play -n synth {} sine {}'.format(dur, freqGold))  # Play if find "gold-dm"
-        del pos
-
-    # Sleep a little before looping
+    for image in images_to_search:
+        pos = imagesearch(image)
+        if pos[0] != -1:
+            if "exchange" in image:
+                os.system('play -n synth {} sine {}'.format(dur, freqMerc))  # Play if find "exchange"
+            elif "gold-dm" in image:
+                os.system('play -n synth {} sine {}'.format(dur, freqGold))  # Play if find "gold-dm"
+            del pos
     time.sleep(0.05)
