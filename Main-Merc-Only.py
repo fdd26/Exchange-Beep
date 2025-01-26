@@ -59,24 +59,28 @@ while True:
     pos = imagesearch("exchange1.png")
     if pos[0] != -1:
         winsound.Beep(freqMerc, dur)
+        print("({0},{1})".format(pos[0],pos[1]) )
         del pos
 
     # 25% resolution square image search with truncation
     pos = imagesearch("exchange2.png")
     if pos[0] != -1:
         winsound.Beep(freqMerc, dur)
+        print("({0},{1})".format(pos[0],pos[1]) )
         del pos
 
     # Truncation search works with side arrows
     pos = imagesearch("exchange3.png")
     if pos[0] != -1:
         winsound.Beep(freqMerc, dur)
+        print("({0},{1})".format(pos[0],pos[1]) )
         del pos
 
     # Truncation search works with bottom arrows
     pos = imagesearch("exchange4.png")
     if pos[0] != -1:
         winsound.Beep(freqMerc, dur)
+        print("({0},{1})".format(pos[0],pos[1]) )
         del pos
 
     # Sleep a little before looping
