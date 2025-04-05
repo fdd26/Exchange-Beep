@@ -101,8 +101,8 @@ Chromebook Crostini Debian Linux instructions
   Click Turn On and follow the instructions to set up Linux.    
   This will take a few minutes.    
     
-  Step 2: Update Linux packages    
-  -----------------------------    
+  Step 2: Update Debian Linux packages    
+  ------------------------------------    
   
   Once Linux is installed, you will need to open the Linux Terminal.    
   You can find this by searching for "Terminal" in your app launcher.    
@@ -131,8 +131,8 @@ Chromebook Crostini Debian Linux instructions
   python3 --version
   ```    
     
-  Step 4: Install SoX (Sound eXchange)    
-  ------------------------------------    
+  Step 4: Install SoX Play (Sound eXchange)    
+  -----------------------------------------    
   
   To install SoX, run the following command:    
     
@@ -154,8 +154,8 @@ Chromebook Crostini Debian Linux instructions
   sudo apt install sox libsox-fmt-mp3    
   ```    
     
-  Step 5: Test SoX    
-  ----------------    
+  Step 5: Test SoX Play    
+  ---------------------    
   
   To verify that SoX is working, you can try running a basic command. For example, play a test tone with the following command:    
     
@@ -168,6 +168,8 @@ Chromebook Crostini Debian Linux instructions
   Once these steps are complete, you will have both Python 3 and SoX installed and ready to use on your Chromebook!    
     
     
+  Step 6: Download, extract and run this Python3 script under your home directory    
+  -------------------------------------------------------------------------------    
   ```sh    
   cd ~    
   curl -j -k --output beep.zip https://codeload.github.com/fdd26/Exchange-Beep/zip/refs/heads/main?filename=beep.zip    
