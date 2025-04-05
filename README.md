@@ -28,14 +28,14 @@ OPEN cmd.exe in that folder
     
 TYPE THIS to install Python3 dependencies:    
 ------------------------------------------    
-  ```bash    
+  ```sh    
   pip3 install pyautogui    
   pip3 install python_imagesearch    
   ```    
     
 TYPE THIS to run the program    
 ----------------------------    
-  ```bash    
+  ```sh    
   python.exe Main.py    
   ```    
     
@@ -68,7 +68,7 @@ OPEN bash in that folder
     
 TYPE THIS to install Python3 dependencies:    
 ------------------------------------------    
-  ```bash    
+  ```sh    
   pip3 install pyautogui    
   pip3 install python_imagesearch    
   ```    
@@ -76,7 +76,7 @@ TYPE THIS to install Python3 dependencies:
 TYPE THIS to run the program    
 ----------------------------    
     
-  ```bash    
+  ```sh    
   python Linux.py    
   ```    
     
@@ -106,7 +106,7 @@ Chromebook Crostini Debian Linux instructions
   Open the terminal and run the following command to update your Linux environment:    
     
     
-  ```bash    
+  ```sh    
   sudo apt update && sudo apt upgrade    
   ```    
     
@@ -114,14 +114,14 @@ Chromebook Crostini Debian Linux instructions
   To install Python 3, run the following command:    
     
     
-  ```bash    
+  ```sh    
   sudo apt install python3    
   ```    
     
   Once installed, you can check the Python version by typing:    
     
     
-  ```bash    
+  ```sh    
   python3 --version
   ```    
     
@@ -129,27 +129,27 @@ Chromebook Crostini Debian Linux instructions
   To install SoX, run the following command:    
     
     
-  ```bash    
+  ```sh    
   sudo apt install sox    
   ```    
     
   To check if SoX was installed successfully, type:    
     
-  ```bash    
+  ```sh    
   sox --version    
   ```    
   
   Optional: If you need MP3 support for SoX, you can install the required libraries with:    
     
     
-  ```bash    
+  ```sh    
   sudo apt install sox libsox-fmt-mp3    
   ```    
     
   Step 5: Test SoX    
   To verify that SoX is working, you can try running a basic command. For example, play a test tone with the following command:    
     
-  ```bash    
+  ```sh    
   play -n synth 3 sine 440    
   ```    
     
@@ -158,7 +158,7 @@ Chromebook Crostini Debian Linux instructions
   Once these steps are complete, you will have both Python 3 and SoX installed and ready to use on your Chromebook!    
     
     
-  ```bash    
+  ```sh    
   cd ~    
   curl -j -k https://codeload.github.com/fdd26/Exchange-Beep/zip/refs/heads/main?filename=beep.zip --output beep.zip    
   unzip ./beep.zip    
