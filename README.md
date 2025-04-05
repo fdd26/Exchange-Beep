@@ -75,6 +75,71 @@ to use the Linux Python script from bash
     
     
     
+    
+    
+    
+Chromebook Crostini Debian Linux instructions    
+=============================================    
+  To install Python 3 and SoX on a Chromebook, you will need to use Linux (Crostini), which is the Linux environment available on most recent Chromebooks. Here is how you can set it up:    
+    
+  Step 1: Enable Linux (Crostini) on your Chromebook    
+  Open Settings on your Chromebook.    
+    
+  Scroll down and find Linux (Beta) under the "Developers" section.    
+    
+  Click Turn On and follow the instructions to set up Linux.    
+  This will take a few minutes.    
+    
+  Step 2: Update Linux packages    
+  Once Linux is installed, you will need to open the Linux Terminal.    
+  You can find this by searching for "Terminal" in your app launcher.    
+    
+  Open the terminal and run the following command to update your Linux environment:    
+    
+    
+  sudo apt update && sudo apt upgrade    
+    
+  Step 3: Install Python 3    
+  To install Python 3, run the following command:    
+    
+    
+  sudo apt install python3    
+  Once installed, you can check the Python version by typing:    
+    
+    
+  python3 --version
+    
+  Step 4: Install SoX (Sound eXchange)    
+  To install SoX, run the following command:    
+    
+    
+  sudo apt install sox    
+    
+  To check if SoX was installed successfully, type:    
+    
+  sox --version    
+  Optional: If you need MP3 support for SoX, you can install the required libraries with:    
+    
+    
+  sudo apt install sox libsox-fmt-mp3    
+    
+  Step 5: Test SoX    
+  To verify that SoX is working, you can try running a basic command. For example, play a test tone with the following command:    
+    
+  play -n synth 3 sine 440    
+    
+  This should play a 3-second sine wave at 440 Hz.    
+    
+  Once these steps are complete, you will have both Python 3 and SoX installed and ready to use on your Chromebook!    
+    
+    
+  cd ~
+  curl -j -k https://codeload.github.com/fdd26/Exchange-Beep/zip/refs/heads/main?filename=beep.zip --output beep.zip
+  unzip ./beep.zip
+  cd ./Exchange-Beep-main/
+  python3 Linux.py
+    
+    
 Original Python3 script forked from:    
 ====================================    
   https://github.com/TotalBattleBots/Exchange-Beep    
