@@ -168,13 +168,37 @@ Chromebook Crostini Debian Linux instructions
   Once these steps are complete, you will have both Python 3 and SoX installed and ready to use on your Chromebook!    
     
     
-  Step 6: Download, extract and run this Python3 script under your home directory    
-  -------------------------------------------------------------------------------    
+  Step 6: Install cURL, wget and unzip    
+  ------------------------------------    
+    
+  ```sh    
+    sudo apt install curl wget unzip    
+    curl --version    
+    wget --version    
+    unzip -v    
+  ```    
+    
+  Step 7: Install Python3 AI libraries    
+  ------------------------------------    
+  ```sh    
+  pip3 install pyautogui    
+  pip3 install python_imagesearch    
+  ```    
+    
+  Step 8: Download, extract this Python3 script under your home directory    
+  -----------------------------------------------------------------------    
   ```sh    
   cd ~    
   curl -j -k --output beep.zip https://codeload.github.com/fdd26/Exchange-Beep/zip/refs/heads/main?filename=beep.zip    
   unzip ./beep.zip    
   cd ./Exchange-Beep-main/    
+  ls -lFa Linux.py    
+  ```    
+    
+  Step 9: Run this Python3 script under your home directory    
+  ---------------------------------------------------------    
+  ```sh    
+  cd ~/Exchange-Beep-main/    
   python3 Linux.py    
   ```    
     
