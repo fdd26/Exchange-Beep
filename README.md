@@ -89,6 +89,14 @@ to use the Linux Python script from bash
     
 Chromebook Crostini Debian Linux instructions    
 =============================================    
+    
+  Step 0: NOT YET WORKING on Chromebook    
+  --------------------------------------------------    
+    
+    Tested on Chromebook but for some reason, you can list the monitors, but you cannot take a screenshot... :-(
+    `XGetImage()` in `mss` library fails after doing all the steps below.
+    
+    
   To install Python 3 and SoX on a Chromebook, you will need to use Linux (Crostini), which is the Linux environment available on most recent Chromebooks. Here is how you can set it up:    
     
   Step 1: Enable Linux (Crostini) on your Chromebook    
@@ -100,6 +108,9 @@ Chromebook Crostini Debian Linux instructions
     
   Click Turn On and follow the instructions to set up Linux.    
   This will take a few minutes.    
+  
+  Re-enable Crostini graphical support by going to Settings
+  -> Linux (Beta) and toggling the option that says "Allow Linux apps to run" if it was disabled.
     
   Step 2: Update Debian Linux packages    
   ------------------------------------    
@@ -207,7 +218,23 @@ Chromebook Crostini Debian Linux instructions
   ```    
     
     
-  Step 10: Download, extract this Python3 script under your home directory    
+  Step 10: Allow Xhost for current user    
+  -------------------------------------    
+  ```sh    
+  xhost +SI:localuser:$USER
+  sudo xhost +SI:localuser:$USER
+  ```    
+    
+    
+  Step 11: Update Debian Linux    
+  ----------------------------    
+  ```sh    
+  sudo apt update
+  sudo apt upgrade
+  ```    
+    
+    
+  Step 12: Download, extract this Python3 script under your home directory    
   ------------------------------------------------------------------------    
   ```sh    
   cd ~    
@@ -217,7 +244,7 @@ Chromebook Crostini Debian Linux instructions
   ls -lFa Linux.py    
   ```    
     
-  Step 11: Run this Python3 script under your home directory    
+  Step 13: Run this Python3 script under your home directory    
   ----------------------------------------------------------    
   ```sh    
   cd ~/Exchange-Beep-main/    
