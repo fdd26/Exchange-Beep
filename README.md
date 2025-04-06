@@ -193,6 +193,7 @@ Chromebook Crostini Debian Linux instructions
   ```sh    
   sudo pip3 install --break-system-packages pyautogui    
   sudo pip3 install --break-system-packages python_imagesearch    
+  sudo pip3 install --break-system-packages mss    
   ```    
     
     
