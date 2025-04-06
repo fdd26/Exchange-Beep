@@ -178,15 +178,36 @@ Chromebook Crostini Debian Linux instructions
     unzip -v    
   ```    
     
-  Step 7: Install Python3 AI libraries    
-  ------------------------------------    
+    
+  Step 7: Install Python3 and X11 extensions    
+  ------------------------------------------    
   ```sh    
-  pip3 install pyautogui    
-  pip3 install python_imagesearch    
+  sudo apt install python3-pip python3-tk python3-dev python3-pip python3-setuptools python3-wheel libx11-dev libjpeg-dev libpng-dev zlib1g-dev libglib2.0-0    
+  sudo apt install x11-utils libx11-dev libxext-dev xauth    
+  sudo apt install x11-apps  libx11-dev libxext-dev libxrandr-dev    
   ```    
     
-  Step 8: Download, extract this Python3 script under your home directory    
-  -----------------------------------------------------------------------    
+    
+  Step 8: Install Python3 AI libraries    
+  ------------------------------------    
+  ```sh    
+  sudo pip3 install --break-system-packages pyautogui    
+  sudo pip3 install --break-system-packages python_imagesearch    
+  ```    
+    
+    
+  Step 9: Install XAuth for ROOT user    
+  -----------------------------------    
+  ```sh    
+  sudo apt install xauth
+  sudo cp ~/.Xauthority /root/.Xauthority 
+  echo $DISPLAY
+  export DISPLAY=:0
+  ```    
+    
+    
+  Step 10: Download, extract this Python3 script under your home directory    
+  ------------------------------------------------------------------------    
   ```sh    
   cd ~    
   curl -j -k --output beep.zip https://codeload.github.com/fdd26/Exchange-Beep/zip/refs/heads/main?filename=beep.zip    
@@ -195,8 +216,8 @@ Chromebook Crostini Debian Linux instructions
   ls -lFa Linux.py    
   ```    
     
-  Step 9: Run this Python3 script under your home directory    
-  ---------------------------------------------------------    
+  Step 11: Run this Python3 script under your home directory    
+  ----------------------------------------------------------    
   ```sh    
   cd ~/Exchange-Beep-main/    
   python3 Linux.py    
