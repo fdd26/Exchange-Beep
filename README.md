@@ -2,8 +2,7 @@ Works with Python 3.12+
     
 Tested successfully on Windows Desktop    
 
-[![Buy Me a Coffee](https://cdn.ko-fi.com/cdn/kofi3.png?v=3)](https://ko-fi.com/fdd26)
-    
+<a href="https://ko-fi.com/fdd26" target="_blank"><img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" alt="Buy Me a Coffee" width="80" style="vertical-align:middle;border:0;margin:auto;" /></a>
     
 Windows 7 / 10 / 11 instructions    
 ================================    
