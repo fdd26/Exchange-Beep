@@ -1,6 +1,8 @@
 Works with Python 3.12+    
     
 Tested successfully on Windows Desktop    
+
+[![Buy Me a Coffee](https://cdn.ko-fi.com/cdn/kofi3.png?v=3)](https://ko-fi.com/fdd26)
     
     
 Windows 7 / 10 / 11 instructions    
