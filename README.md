@@ -2,6 +2,7 @@ Works with Python 3.12+
     
 Tested successfully on Windows Desktop    
 
+**Donations:**
 <a href="https://ko-fi.com/fdd26" target="_blank"><img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" alt="Buy Me a Coffee" width="180" style="vertical-align:middle;border:0;margin:auto;width:180px;" /></a>
     
 Windows 7 / 10 / 11 instructions    
